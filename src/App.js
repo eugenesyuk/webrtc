@@ -1,4 +1,5 @@
 import './App.scss'
+import './Connection'
 
 function App() {
     return (
