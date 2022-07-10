@@ -1,8 +1,11 @@
 {
-  "parser": "babel-eslint",
-  "plugins": ["prettier", "react", "react-hooks"],
-  "rules": {
-    "prettier/prettier": "error"
-  },
-  "extends": ["prettier"]
+    "plugins": ["prettier", "react", "react-hooks"],
+    "rules": {
+        "prettier/prettier": "error"
+    },
+    "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2022
+    }
 }
