@@ -14,6 +14,8 @@ import Link from '@mui/material/Link'
 import GlobalStyles from '@mui/material/GlobalStyles'
 import Container from '@mui/material/Container'
 
+import { AppName } from '../core/Globals'
+
 function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -84,7 +86,7 @@ function HomeContent() {
             >
                 <Toolbar sx={{ flexWrap: 'wrap' }}>
                     <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-                        Company name
+                        {AppName}
                     </Typography>
                     <nav>
                         <Link variant="button" color="text.primary" href="#" sx={{ my: 1, mx: 1.5 }}>
