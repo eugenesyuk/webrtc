@@ -4,6 +4,7 @@ import { firebase, firestore } from './Firebase'
 
 function App() {
     console.log({ firebase, firestore })
+    console.log(peerConnection)
 
     return (
         <div className="App">

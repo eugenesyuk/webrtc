@@ -1,28 +1,10 @@
-navigator.getUserMedia(
-    { video: false, audio: true },
-    (stream) => {
-        getPeerConnectionSDP(stream)
-    },
-    (error) => {
-        throw new Error(error)
-    }
-)
-
-const getPeerConnectionSDP = (stream) => {
-    const pc = new RTCPeerConnection({
-        offerToReceiveAudio: true,
-        offerToReceiveVideo: false,
-        iceServers: []
-    })
-
-    stream.getTracks().forEach((track) => pc.addTrack(track, stream))
-
-    pc.createOffer()
-        .then((offer) => {
-            console.log(offer.sdp)
-            console.log(pc)
-        })
-        .catch((e) => {
-            console.error(e)
-        })
+const RTCPeerConectionConfiguration = {
+    iceServers: [
+        {
+            urls: ['stun:stun1.l.google.com:19302', 'stun:stun2.l.google.com:19302']
+        }
+    ],
+    iceCandidatePoolSize: 10
 }
+
+export const peerConnection = new RTCPeerConnection(RTCPeerConectionConfiguration)
