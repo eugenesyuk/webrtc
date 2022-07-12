@@ -1,7 +1,10 @@
 import './App.scss'
-import './Connection'
+import { peerConnection } from './Connection'
+import { firebase, firestore } from './Firebase'
 
 function App() {
+    console.log({ firebase, firestore })
+
     return (
         <div className="App">
             <main className="App-container">Silence is golden</main>
