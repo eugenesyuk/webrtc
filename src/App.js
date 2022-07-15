@@ -6,7 +6,9 @@ import DefaultTheme from './DefaultTheme'
 import { firebase, firestore } from './core/Firebase'
 import { peerConnection } from './core/Connection'
 
-import Home from './components/Home'
+import { Features, Home } from './components/pages'
+import { Layout } from './components/layout'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
     console.log({ firebase, firestore })
@@ -14,7 +16,11 @@ function App() {
 
     return (
         <ThemeProvider theme={DefaultTheme}>
-            <Home />
+            <Routes>
+                <Route path="/" element={<Layout component={Home} />} />
+                <Route path="/features" element={<Layout component={Features} />} />
+                {/* <Layout component={Home} /> */}
+            </Routes>
         </ThemeProvider>
     )
 }
