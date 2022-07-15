@@ -1,5 +1,4 @@
-import { AppBar, Toolbar, Typography, Link, Button } from '@mui/material'
-import { NavLink } from 'react-router-dom'
+import { AppBar, Toolbar, Link, Button } from '@mui/material'
 import { AppName } from '../../core/Globals'
 
 export const Header = () => {
